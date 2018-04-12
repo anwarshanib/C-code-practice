@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+int a[500][500];
+int i,j,difer;
+int diagonalDifference(int n) { 
+    int left=0,right=0;
+    for(i=0;i<n;i++)
+    {
+        left=left+a[i][i];
+        right=right+a[i][n-1-i];
+    }
+  return abs(left-right);
+}
+
+int main()
+{
+ 
+
+    int n;
+    cin >> n;
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+            cin>>a[i][j];
+    }   
+    difer=diagonalDifference(n);
+    cout<<difer;
+}
