@@ -1,0 +1,42 @@
+//OUTPUT
+PRINT STAIRCASE
+         #
+        ##
+       ###
+      ####
+
+#include <bits/stdc++.h>
+
+using namespace std;
+int i,j,rem;
+void staircase(int x) {
+    int k;
+ for(i=0;i<x;i++)
+ {
+   for(j=0;j<=i;j++)
+   {
+       for(k=0;k<(x-i-1);k++)
+       {
+     cout<<" ";
+       }
+     cout<<"#";
+       rem=i;
+       while(rem!=0)
+       {
+           cout<<"#";
+           rem=rem-1;
+       }
+       break;
+   }
+     cout<<"\n";
+ }
+
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    staircase(n);
+    
+}
